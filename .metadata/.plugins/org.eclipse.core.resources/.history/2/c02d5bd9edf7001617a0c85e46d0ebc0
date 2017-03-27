@@ -1,0 +1,137 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.BoxLayout;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
+public class CapDevUi extends JFrame {
+  public CapDevUi() {
+    setTitle("FirstFrame");
+    setSize(500, 300);
+    
+   
+    
+    JPanel controlPanel = new JPanel();
+    BoxLayout layout = new BoxLayout(controlPanel, BoxLayout.Y_AXIS);
+    controlPanel.setLayout(layout);
+    //controlPanel.setLayout(new FlowLayout());
+    
+    JLabel titleLabel = new JLabel("", JLabel.CENTER);    
+    titleLabel.setText("Welcome to CapDevKit Hack-A-Thon"); 
+    controlPanel.add(titleLabel);
+    
+    JPanel radioPanel = new JPanel();
+    BoxLayout radioPanelLayout = new BoxLayout(radioPanel, BoxLayout.X_AXIS);
+    radioPanel.setLayout(radioPanelLayout);
+    
+    JPanel langPanel = new JPanel();
+    langPanel.setAlignmentX(JPanel.LEFT_ALIGNMENT);
+    BoxLayout langPanelLayout = new BoxLayout(langPanel, BoxLayout.Y_AXIS);
+    langPanel.setLayout(langPanelLayout);
+    //Paython/Java
+    JRadioButton java=new JRadioButton("Java");    
+    JRadioButton python=new JRadioButton("Python");      
+    ButtonGroup lanbased=new ButtonGroup();    
+    lanbased.add(java);lanbased.add(python); 
+    langPanel.add(java);
+    langPanel.add(python);
+    radioPanel.add(langPanel);
+    
+    JPanel reqPanel = new JPanel();
+    langPanel.setAlignmentX(JPanel.RIGHT_ALIGNMENT);
+    BoxLayout reqPanelLayout = new BoxLayout(reqPanel, BoxLayout.Y_AXIS);
+    reqPanel.setLayout(reqPanelLayout);
+    //File/Rest
+    JRadioButton filebased=new JRadioButton("File based");    
+    JRadioButton restbased=new JRadioButton("Rest based");      
+    ButtonGroup reqbased=new ButtonGroup();    
+    reqbased.add(filebased);reqbased.add(restbased); 
+    reqPanel.add(filebased);
+    reqPanel.add(restbased);
+    reqPanel.add(reqPanel);
+    
+    controlPanel.add(radioPanel);
+    
+    //Collect info to go further
+    
+    //Entry Point
+    JPanel entryPointPanel = new JPanel();
+    BoxLayout entryPointLayout = new BoxLayout(entryPointPanel, BoxLayout.X_AXIS);
+    entryPointPanel.setLayout(entryPointLayout);
+    JPanel entryPointPanelInput = new JPanel();
+    JLabel  entryPointLabel= new JLabel("Entry point ", JLabel.RIGHT);
+    final JTextField entryPointText = new JTextField(20);
+    entryPointPanelInput.add(entryPointText);
+    entryPointPanel.add(entryPointLabel);
+    entryPointPanel.add(entryPointPanelInput);
+    controlPanel.add(entryPointPanel);
+    
+    
+    JPanel assessmentIdPanel = new JPanel();
+    BoxLayout assessmentIdLayout = new BoxLayout(assessmentIdPanel, BoxLayout.X_AXIS);
+    assessmentIdPanel.setLayout(assessmentIdLayout);
+    JPanel assessmentIdTextInput = new JPanel();
+    JLabel  assessmentIdTextLabel= new JLabel("Assessment Id ", JLabel.RIGHT);
+    final JTextField assessmentIdText = new JTextField(20);
+    entryPointPanelInput.add(assessmentIdText);
+    entryPointPanel.add(assessmentIdTextLabel);
+    entryPointPanel.add(assessmentIdTextInput);
+    controlPanel.add(assessmentIdPanel);
+    
+/*    JLabel  assessmentIdLabel = new JLabel("Assessment Id ", JLabel.RIGHT);
+    final JTextField assessmentIdText = new JTextField(6);
+    controlPanel.add(assessmentIdLabel);
+    controlPanel.add(assessmentIdText);*/
+ /*   
+    JLabel  assessmentArtifactLabel= new JLabel("Assessment Artifact ", JLabel.RIGHT);
+    final JTextField assessmentArtifactText = new JTextField(6);
+    controlPanel.add(assessmentArtifactLabel);
+    controlPanel.add(assessmentArtifactText);
+    
+    JLabel  downloadArtifactsLabel= new JLabel("Path to download artifacts ", JLabel.RIGHT);
+    final JTextField downloadArtifactsText = new JTextField(6);
+    JButton downloadArtifactsButton = new JButton("path to download artifacts");
+    controlPanel.add(downloadArtifactsLabel);
+    controlPanel.add(downloadArtifactsButton);
+    controlPanel.add(downloadArtifactsText);
+    downloadArtifactsButton.addActionListener(new ActionListener() {
+		
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			System.out.println("Clicked!!");
+			JFileChooser chooser = new JFileChooser();
+		    chooser.setCurrentDirectory(new java.io.File("."));
+		    chooser.setDialogTitle("choosertitle");
+		    chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+		    chooser.setAcceptAllFileFilterUsed(false);
+
+		    if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+		      System.out.println("getCurrentDirectory(): " + chooser.getCurrentDirectory());
+		      System.out.println("getSelectedFile() : " + chooser.getSelectedFile());
+		      downloadArtifactsText.setText(chooser.getSelectedFile().getAbsolutePath());
+		    } else {
+		      System.out.println("No Selection ");
+		    }
+		}
+	});*/
+    
+    
+    
+    
+    
+    add(controlPanel);
+  }
+
+  public static void main(String[] args) {
+    JFrame frame = new CapDevUi();
+    frame.show();
+  }
+}
+ 

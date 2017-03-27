@@ -1,0 +1,15 @@
+
+public class DesignCar {
+
+}
+class Car{
+	double milage;
+	double tank;
+	double tankCapacity;
+	public void drive(){
+		
+	}
+	public void fillTank(){
+			
+		}
+}

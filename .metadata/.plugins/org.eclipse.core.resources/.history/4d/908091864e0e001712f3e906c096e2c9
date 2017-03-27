@@ -1,0 +1,46 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+
+
+public class FindWhetherPathExist {
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
+
+		int t = Integer.parseInt(br.readLine().trim());
+		while (t-- > 0) {
+			String str[] = br.readLine().trim().split(" ");
+			// code
+			int n = Integer.parseInt(str[0].trim());
+			int arr[][] = new int[n][n];
+			str = br.readLine().trim().split(" ");
+			int sourcei,sourcej,desti,destj;
+			for (int i = 0, ind = 0; i < n; i++) {
+				for (int j = 0; j < n; j++) {
+					arr[i][j] = Integer.parseInt(str[ind++]);
+					if(arr[i][j]==1)
+					{
+						sourcei=i;sourcej=j;
+					}
+					if(arr[i][j]==2)
+					{
+						desti=i;destj=j;
+					}
+				}
+			}
+			checkPath(arr,sourcei,sourcej,desti,destj);
+			pw.println();
+		}
+
+		pw.flush();
+		pw.close();
+	}
+
+	private static boolean checkPath(int[][] arr, int sourcei, int sourcej,
+			int desti, int destj) {
+		
+		return false;
+	}
+}

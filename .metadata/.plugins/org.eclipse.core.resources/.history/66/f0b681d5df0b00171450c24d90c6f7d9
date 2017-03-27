@@ -1,0 +1,9 @@
+
+public class Static {
+	public static void main(String[] args) throws Exception {
+		
+	}
+}
+class T{
+	
+}

@@ -1,0 +1,25 @@
+import java.lang.invoke.SwitchPoint;
+
+
+public class NamingConvetions {//class name should startswith uppercase, shouldn't contains $
+
+	int varableName;//camel case
+	final int PI=10;//uppercase letters or _
+	String a="bala";
+	/*switch (a){
+		case "bala":
+			System.out.println("a");
+			break;
+		case "satish":
+			System.out.println("b");
+			break;
+	}*/
+	int aa=1;
+	switch(aa){
+	case 1:
+		break;
+	case 2:
+		break;
+	}
+}
+}

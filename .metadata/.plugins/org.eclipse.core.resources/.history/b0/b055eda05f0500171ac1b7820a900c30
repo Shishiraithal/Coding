@@ -1,0 +1,7 @@
+
+public class NamingConvetions {//class name should startswith uppercase, shouldn't contains $
+
+	int varableName;//camel case
+	final int PI=10;//uppercase letters or _
+	
+}

@@ -1,0 +1,19 @@
+
+public class DesignCar {
+
+}
+class Car{
+	double milage;
+	double tank;
+	double tankCapacity;
+	public int Car() {
+		// TODO Auto-generated constructor stub
+		return 10;
+	}
+	public void drive(){
+		
+	}
+	public void fillTank(){
+			
+		}
+}

@@ -1,0 +1,81 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class CapDevUi extends JFrame {
+  public CapDevUi() {
+    setTitle("FirstFrame");
+    setSize(300, 200);
+    
+   
+    
+    JPanel controlPanel = new JPanel();
+    controlPanel.setLayout(new FlowLayout());
+    
+    JLabel titleLabel = new JLabel("", JLabel.CENTER);    
+    titleLabel.setText("Welcome to CapDevKit Hack-A-Thon"); 
+    controlPanel.add(titleLabel);
+    
+    
+    JLabel  entryPointLabel= new JLabel("Entry point ", JLabel.RIGHT);
+    final JTextField entryPointText = new JTextField(6);
+    controlPanel.add(entryPointLabel);
+    controlPanel.add(entryPointText);
+    
+    JLabel  assessmentIdLabel = new JLabel("Assessment Id ", JLabel.RIGHT);
+    final JTextField assessmentIdText = new JTextField(6);
+    controlPanel.add(assessmentIdLabel);
+    controlPanel.add(assessmentIdText);
+    
+    JLabel  assessmentArtifactLabel= new JLabel("Entry point ", JLabel.RIGHT);
+    final JTextField assessmentArtifactText = new JTextField(6);
+    controlPanel.add(assessmentArtifactLabel);
+    controlPanel.add(entryPointText);
+    
+    JLabel  downloadArtifactsLabel= new JLabel("Path to download artifacts ", JLabel.RIGHT);
+    final JTextField downloadArtifactsText = new JTextField(6);
+    JButton downloadArtifactsButton = new JButton("path to download artifacts");
+    controlPanel.add(downloadArtifactsLabel);
+    controlPanel.add(downloadArtifactsButton);
+    controlPanel.add(downloadArtifactsText);
+    downloadArtifactsButton.addActionListener(new ActionListener() {
+		
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			System.out.println("Clicked!!");
+			JFileChooser chooser = new JFileChooser();
+		    chooser.setCurrentDirectory(new java.io.File("."));
+		    chooser.setDialogTitle("choosertitle");
+		    chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+		    chooser.setAcceptAllFileFilterUsed(false);
+
+		    if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+		      System.out.println("getCurrentDirectory(): " + chooser.getCurrentDirectory());
+		      System.out.println("getSelectedFile() : " + chooser.getSelectedFile());
+		      downloadArtifactsText.setText(chooser.getSelectedFile().getAbsolutePath());
+		    } else {
+		      System.out.println("No Selection ");
+		    }
+		}
+	});
+    
+    
+    
+    
+    
+    add(controlPanel);
+  }
+
+  public static void main(String[] args) {
+    JFrame frame = new CapDevUi();
+    frame.show();
+  }
+}
+ 

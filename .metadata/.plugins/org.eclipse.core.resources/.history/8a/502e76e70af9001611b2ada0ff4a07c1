@@ -1,0 +1,8 @@
+import java.io.IOException;
+
+
+public class Main2 {
+	public static void main(String[] arg) throws IOException{
+		Process p = Runtime.getRuntime().exec("gui-terminal");
+	}
+}

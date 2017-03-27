@@ -1,0 +1,58 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+
+public class DS_Stack {
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
+
+		int t = Integer.parseInt(br.readLine().trim());
+		Queue queue=new Queue(101);
+		while (t-- > 0) {
+			String str[] = br.readLine().trim().split(" ");
+			// code
+			
+			if(str[0].equals("E")){
+				queue.enqueue(Integer.parseInt(str[1].trim()));
+			}
+			else
+				queue.dequeue();
+			pw.println();
+		}
+
+		pw.flush();
+		pw.close();
+	}
+}
+
+class Stack {
+	int size;
+	int top=0;
+	int stackArray[];
+	Stack(int size) {
+		this.size = size;
+		stackArray=new int[size];
+		
+	}
+
+	public void push(int val) {
+		if(top<size){
+			stackArray[top++]=val;
+		}
+		else
+			System.out.println("Stack Overflow!!");
+	}
+
+	public void pop() {
+		if(top>=0){
+		System.out.println(stackArray[top]);
+		stackArray[top--]=0;}
+		else
+			System.out.println("Stack Underflow!!");
+	}
+	public void peek() {
+		System.out.println(stackArray[top]);
+	}
+}

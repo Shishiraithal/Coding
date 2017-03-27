@@ -1,0 +1,20 @@
+
+public class ObjectReferencePreservation {
+	public static void main(String[] args) throws Exception {
+		
+		A a = new A();
+		a.x=10;
+		System.out.println("Before : "+a.x);
+		B b = new B();
+		b.methodA(a);
+	}
+	
+}
+class A{
+	int x;
+}
+class B{
+	public void methodA(A a){
+		System.out.println("Indside B : "+a.x);
+	}
+}

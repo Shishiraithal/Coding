@@ -1,0 +1,22 @@
+
+public class DesignCar {
+public static void main(String[] args) {
+	
+}
+}
+class Car{
+	double milage;
+	double tank;
+	double tankCapacity;
+	public int Car() {
+		// TODO Auto-generated constructor stub
+		System.out.println("hi");
+		return 10;
+	}
+	public void drive(){
+		
+	}
+	public void fillTank(){
+			
+		}
+}

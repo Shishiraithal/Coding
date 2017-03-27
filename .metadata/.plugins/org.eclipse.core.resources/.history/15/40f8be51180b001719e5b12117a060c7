@@ -1,0 +1,16 @@
+
+public class ObjectReferencePreservation {
+	public static void main(String[] args) throws Exception {
+		
+		A a = new A();
+	}
+	
+}
+class A{
+	int x;
+}
+class B{
+	public void methodA(A a){
+		
+	}
+}

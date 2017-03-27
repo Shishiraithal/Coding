@@ -1,0 +1,21 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+
+
+public class LinkedList {
+	public static void main(String[] args) throws Exception {
+
+		Node head=
+		
+		
+	}
+}
+class Node{
+	int val;
+	Node next;
+	Node(int v){
+		val=v;
+	}
+}
