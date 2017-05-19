@@ -1,0 +1,126 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+
+
+//To find shortest path
+public class Graph_PrimsMST {
+	public static void main(String[] args) throws Exception {
+		
+		/*
+		Dijkstra dij=new Dijkstra(4); 
+		dij.addEdge(0, 1, 2);
+		dij.addEdge(0, 3, 1);
+		dij.addEdge(1, 2, 1);
+		dij.addEdge(2, 3, 1);
+		dij.addEdge(1, 0, 2);
+		dij.addEdge(3, 0, 1);
+		dij.addEdge(2, 1, 1);
+		dij.addEdge(3, 2, 1);
+		dij.shortestPath(0);*/
+		
+		Dijkstra dij=new Dijkstra(9);
+		dij.addEdge(0,1,4);
+		dij.addEdge(0,7,8);
+		dij.addEdge(1,7,11);
+		dij.addEdge(1,2,8);
+		dij.addEdge(7,8,7);
+		dij.addEdge(7,6,1);
+		dij.addEdge(2,8,2);
+		dij.addEdge(2,5,4);
+		dij.addEdge(2,3,7);
+		dij.addEdge(6,5,2);
+		dij.addEdge(6,8,6);
+		dij.addEdge(3,5,14);
+		dij.addEdge(3,4,9);
+		dij.addEdge(4,5,10);
+		dij.addEdge(1,0,4);
+		dij.addEdge(7,0,8);
+		dij.addEdge(7,1,11);
+		dij.addEdge(2,1,8);
+		dij.addEdge(8,7,7);
+		dij.addEdge(6,7,1);
+		dij.addEdge(8,2,2);
+		dij.addEdge(5,2,4);
+		dij.addEdge(3,2,7);
+		dij.addEdge(5,6,2);
+		dij.addEdge(8,6,6);
+		dij.addEdge(5,3,14);
+		dij.addEdge(4,3,9);
+		dij.addEdge(5,4,10);
+		dij.shortestPath(0);
+
+		System.out.println("Done!!");
+	}
+}
+
+class Dijkstra{
+	LinkedList graph[];
+	int weight[][];
+	int size;
+	Dijkstra(int n){
+		//n is number of nodes, and node naming is starts from 0 to n-1
+		size=n;
+		graph=new LinkedList[size];
+		weight=new int[size][size];
+	
+		for(int i=0;i<size;i++){
+			graph[i]=new LinkedList<Integer>();
+		}
+	}
+	
+	public void addEdge(int source,int destination,int edgeWeight){ 
+		//edge with weight
+		graph[source].add(destination);
+		weight[source][destination]=edgeWeight;
+	}
+	
+	public void shortestPath(int source){
+		
+		//step1 
+		//Create sptSet of graph size and initialize with inf
+		int sptSet[]=new int[size];
+		for(int i=0;i<size;i++)
+			sptSet[i]=Integer.MAX_VALUE;
+		
+		//step2
+		//make source shortest path is 0, from inf..Why because from source to source distance should be 0
+		sptSet[source]=0;
+		
+		HashSet<Integer> sptSetFlag = new HashSet<>();//to check 
+		sptSetFlag.add(source);
+		
+		while(sptSetFlag.size()!=size-1){
+			
+			//update vertices by fetching adjacent vertices weight set[u]+w[u,v]=set[v] if set[u]+w[u,v]<set[v]
+			Iterator<Integer> adjNodes = graph[source].iterator();
+			while(adjNodes.hasNext()){
+				int tempDest=adjNodes.next();
+				if(!sptSetFlag.contains(tempDest)){
+					if(sptSet[source]+weight[source][tempDest]<sptSet[tempDest]){
+						sptSet[tempDest]=sptSet[source]+weight[source][tempDest];
+					}
+				}
+			}
+			//Optimization required
+			//extract non visited min node index
+			int minNodeValue=Integer.MAX_VALUE;
+			int minNode=-1;
+			for(int i=0;i<size;i++){
+				//extract non visited min node index
+				if(!sptSetFlag.contains(i)&&minNodeValue>sptSet[i]){
+					minNodeValue=sptSet[i];
+					minNode=i;
+				}
+			}
+			if(minNode!=-1)
+			{
+				sptSetFlag.add(minNode);
+				source=minNode;
+			}
+			
+		}
+		System.out.println(Arrays.toString(sptSet));
+	}
+}

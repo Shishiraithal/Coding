@@ -1,0 +1,36 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.util.Arrays;
+
+public class CHEFDIV {
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
+
+		String str[] = br.readLine().trim().split(" ");
+		// code
+		
+		int a=Integer.parseInt(str[0].trim());
+		int b=Integer.parseInt(str[1].trim());
+		
+		int c=Math.max(a, b);
+		int degree[]=new int[c+1];
+		degree[1]=1;
+		for(int i=2;i<=c;i++){
+			for(int j=1;j<i;j++){
+				if(i%j==0)
+					degree[i]+=1;//degree[j];
+			}
+			degree[i]+=1;
+		}
+		System.out.println(degree[a]+degree[b]);
+		System.out.println(Arrays.toString(degree));
+
+		pw.println();
+
+		pw.flush();
+		pw.close();
+	}
+}

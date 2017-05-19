@@ -1,0 +1,68 @@
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+
+
+//To find shortest path
+public class Graph_DijkstrasSP {
+	public static void main(String[] args) throws Exception {
+		
+	}
+}
+
+class Dijkstra{
+	LinkedList graph[];
+	int weight[][];
+	int size;
+	Dijkstra(int n){
+		//n is number of nodes, and node naming is starts from 0 to n-1
+		size=n;
+		graph=new LinkedList[size];
+		weight=new int[size][size];
+	
+		for(int i=0;i<size;i++){
+			graph[i]=new LinkedList<Integer>();
+		}
+	}
+	
+	public void addEdge(int source,int destination,int edgeWeight){ 
+		//edge with weight
+		graph[source].add(destination);
+		weight[source][destination]=edgeWeight;
+	}
+	
+	public void shortestPath(int source){
+		
+		//step1 
+		//Create sptSet of graph size and initialize with inf
+		int sptSet[]=new int[size];
+		for(int i=0;i<size;i++)
+			sptSet[i]=Integer.MAX_VALUE;
+		
+		//step2
+		//make source shortest path is 0, from inf..Why because from source to source distance should be 0
+		sptSet[source]=0;
+		
+		HashSet<Integer> sptSetFlag = new HashSet<>();//to check 
+		sptSetFlag.add(source);
+		
+		while(sptSetFlag.size()!=size){
+			
+			Iterator<Integer> adjNodes = graph[source].iterator();
+			while(adjNodes.hasNext()){
+				int tempDest=adjNodes.next();
+				if(!sptSetFlag.contains(tempDest)){
+					if(sptSet[source]+weight[source][tempDest]<sptSet[tempDest]){
+						sptSet[tempDest]=sptSet[source]+weight[source][tempDest];
+					}
+				}
+				int minNodeValue=Integer.MAX_VALUE;
+				for(int i=0;i<size;i++){
+					//extract non visited min node index
+					if()
+				}
+			}
+		}
+		
+	}
+}

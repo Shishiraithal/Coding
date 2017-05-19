@@ -1,0 +1,43 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+
+
+public class TidyNumber {
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
+
+		int t = Integer.parseInt(br.readLine().trim());
+		int caseInd=1;
+		while (t-- > 0) {
+			String str = br.readLine().trim();
+			//code
+			long val=Long.parseLong(str);
+			System.out.println(checkDigNonDecrease(str));
+			if(checkDigNonDecrease(str)){
+				
+			}
+			
+			pw.println("Case #"+(caseInd++)+": "+caseInd);
+		}
+
+		pw.flush();
+		pw.close();
+	}
+
+	private static boolean checkDigNonDecrease(String str) {
+		int ch=0;
+		boolean checkDigNonDecreaseValue=true;
+		for(int i=0;i<str.length();i++){
+			if(ch<=(int)str.charAt(i))
+				ch=(int)str.charAt(i);
+			else{
+				checkDigNonDecreaseValue=false;
+				break;
+			}
+		}
+		return checkDigNonDecreaseValue;
+	}
+}

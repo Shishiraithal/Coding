@@ -1,0 +1,89 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+
+public class PancakeFlipper {
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
+
+		int t = Integer.parseInt(br.readLine().trim());
+		int caseInd = 1;
+		while (t-- > 0) {
+			String str[] = br.readLine().trim().split(" ");
+			// code
+			StringBuffer s = new StringBuffer(str[0].trim());
+			int k = Integer.parseInt(str[1].trim());
+			if (!s.toString().contains("-")) {
+				pw.println("Case #" + (caseInd++) + ": 0");
+			} else {
+
+				int left = 0, right = s.length() - 1;
+				int total=0;
+				StringBuffer prev=new StringBuffer(s.toString());
+				while (true) {
+					System.out.println("left "+left+" right "+right);
+					// doleft
+					if(left-1>=0)
+						left--;
+					while (true) {
+						if (left<s.length()&&s.charAt(left) == '+')
+							left++;
+						else
+							break;
+					}
+					if (left<s.length()&&s.charAt(left) == '-') {
+						if(left+k<s.length())
+							total++;
+						
+						if(left+k<s.length())
+						for (int i = left; i < left + k; i++)
+							if (s.charAt(i) == '-')
+								s.setCharAt(i, '+');
+							else
+								s.setCharAt(i, '-');
+						
+					}
+					
+					 System.out.println(s+" - "+right);
+					// doright
+					 if(right+1<s.length())
+						 right++;
+					while (true) {
+						if (right>=0&&s.charAt(right) == '+')
+							right--;
+						else
+							break;
+						//System.out.println(right);
+					}
+					if (right>=0&&s.charAt(right) == '-') {
+						if(right-k>=0)
+							total++;
+						
+						if(right-k>=0)
+						for (int i = right; i > right-k; i--)
+							if (s.charAt(i) == '-')
+								s.setCharAt(i, '+');
+							else
+								s.setCharAt(i, '-');
+
+					}
+					System.out.println(s+" "+right);
+					if(prev.toString().equals(s.toString())){
+						break;
+					}else
+					prev=s;
+
+				}
+				if(s.toString().contains("-"))
+					pw.println("Case #" + (caseInd++) + ": IMPOSSIBLE");
+				else
+					pw.println("Case #" + (caseInd++) + ": " + total);
+			}
+		}
+
+		pw.flush();
+		pw.close();
+	}
+}

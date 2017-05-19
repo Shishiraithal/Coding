@@ -1,0 +1,68 @@
+import java.awt.geom.QuadCurve2D;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.util.Arrays;
+
+public class ShilAndRoundNumbers {
+	public static int bit[];
+	public static int a[];
+
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
+		String str[] = br.readLine().trim().split(" ");
+		// String sArr[]=br.readLine().trim().split(" ");
+		int len = Integer.parseInt(str[0]);
+		int q = Integer.parseInt(str[1]);
+
+		String inp[] = br.readLine().trim().split(" ");
+		a = new int[len];
+		int i = 0;
+		for (String s : inp)
+			a[i++] = Integer.parseInt(s.trim());
+
+		bit = new int[len + 1];
+		for (i = 1; i <= len; i++)
+			update(i, a[i - 1],false);
+
+		while (q-- > 0) {
+			str = br.readLine().trim().split(" ");
+			if (str[0].trim().equals("2")) { // update value
+				int at = Integer.parseInt(str[1].trim());
+				int by = Integer.parseInt(str[2].trim());
+				update(at, a[at-1],true);
+				a[at-1]=by;
+				update(at, a[at-1],false);
+			} else { // print value
+				int l = Integer.parseInt(str[1].trim());
+				int r = Integer.parseInt(str[2].trim());
+				pw.println(query(l, r));
+			}
+		}
+		pw.flush();
+		pw.close();
+	}
+
+	public static void update(int at, int by,boolean decrease) {
+		int len = bit.length;
+		int add = (("" + by).charAt(0) == ("" + by)
+				.charAt(("" + by).length() - 1)) ? 1 : 0;
+		if(decrease)
+			add=-add;
+		for (; at < len; at += at & -at) {
+			bit[at] += add;
+		}
+		System.out.println(Arrays.toString(bit));
+	}
+	public static int query( int right) {
+		int ans = 0;
+		for (; right > 0; right -= right & -right) {
+			ans += bit[right];
+		}
+		
+		return ans;
+	}
+
+}

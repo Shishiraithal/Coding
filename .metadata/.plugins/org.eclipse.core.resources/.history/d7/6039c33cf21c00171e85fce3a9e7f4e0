@@ -1,0 +1,32 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+
+
+class Love {
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
+
+		
+			String str = br.readLine().trim();
+			
+			int l=0,o=0,v=0,e=0;
+			for(int i=0;i<str.length();i++){
+				if(str.charAt(i)=='l'||str.charAt(i)=='L')
+					l=i;
+				if(str.charAt(i)=='o'||str.charAt(i)=='O')
+					o=i;
+				if(str.charAt(i)=='o'||str.charAt(i)=='O')
+					o=i;
+				if(str.charAt(i)=='o'||str.charAt(i)=='O')
+					o=i;
+			}
+
+			pw.println();
+		//}
+		pw.flush();
+		pw.close();
+	}
+}

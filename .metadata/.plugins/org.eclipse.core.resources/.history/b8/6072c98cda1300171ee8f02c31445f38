@@ -1,0 +1,18 @@
+
+//To find shortest path
+public class Graph_DijkstrasSP {
+	public static void main(String[] args) throws Exception {
+		
+	}
+}
+
+class Dijkstra{
+	
+	Dijkstra(int n){
+		//n is number of nodes
+	}
+	
+	addEdge(int node1,int node2,int weight){ //edge with weight
+
+	}
+}

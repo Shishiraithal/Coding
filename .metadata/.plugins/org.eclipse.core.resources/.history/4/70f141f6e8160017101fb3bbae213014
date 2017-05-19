@@ -1,0 +1,137 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+
+
+//To find shortest path
+public class Graph_KruskalsMST {
+	public static void main(String[] args) throws Exception {
+		
+		/*
+		primskstra prims=new primskstra(4); 
+		prims.addEdge(0, 1, 2);
+		prims.addEdge(0, 3, 1);
+		prims.addEdge(1, 2, 1);
+		prims.addEdge(2, 3, 1);
+		prims.addEdge(1, 0, 2);
+		prims.addEdge(3, 0, 1);
+		prims.addEdge(2, 1, 1);
+		prims.addEdge(3, 2, 1);
+		prims.shortestPath(0);*/
+		
+		int V = 4;  // Number of vertices in graph
+        int E = 5;  // Number of edges in graph
+        Kruskals graph = new Kruskals(V, E);
+ 
+        // add edge 0-1
+        graph.edge[0].src = 0;
+        graph.edge[0].dest = 1;
+        graph.edge[0].weight = 10;
+ 
+        // add edge 0-2
+        graph.edge[1].src = 0;
+        graph.edge[1].dest = 2;
+        graph.edge[1].weight = 6;
+ 
+        // add edge 0-3
+        graph.edge[2].src = 0;
+        graph.edge[2].dest = 3;
+        graph.edge[2].weight = 5;
+ 
+        // add edge 1-3
+        graph.edge[3].src = 1;
+        graph.edge[3].dest = 3;
+        graph.edge[3].weight = 15;
+ 
+        // add edge 2-3
+        graph.edge[4].src = 2;
+        graph.edge[4].dest = 3;
+        graph.edge[4].weight = 4;
+        
+        graph.KruskalsMST(graph);
+	}
+}
+
+class Kruskals{
+	int V,E;
+	Edge edge[];
+	class Edge {
+		int src,dest,weight;
+	}
+	public Kruskals(int v,int e) {
+		V=v;E=e;
+		edge=new Edge[e];
+		for(int i=0;i<e;i++)
+			edge[i]=new Edge();
+	}
+	public void KruskalsMST(Kruskals graph){
+		//sort w.r.t weight
+		/*for(int i=0;i<E;i++){System.out.println(edge[i].weight);}*/
+		System.out.println("---");
+		Arrays.sort(edge,(a, b) -> a.weight < b.weight ? -1:1);
+		/*for(int i=0;i<E;i++){System.out.println(edge[i].weight);}*/
+		
+		UnionFindKruskals unionFindKruskals = new UnionFindKruskals(V, E);
+		for(int i=0;i<E;i++){
+			
+			unionFindKruskals.edge[i].src=graph.edge[i].src;
+			unionFindKruskals.edge[i].dest=graph.edge[i].dest;
+			
+			
+		}
+		
+	}
+	
+}
+
+class UnionFindKruskals{
+	int V,E;
+	Edge edge[];
+	class Edge{
+		int src,dest;
+	}
+	public UnionFindKruskals(int v,int e) {
+		V=v;//#of vertices
+		E=e;//#of edges
+		edge=new Edge[e];
+		for(int i=0;i<e;i++)
+			edge[i]=new Edge();
+	}
+	
+	public int find(int parent[],int node){
+		if(parent[node]==-1)
+			return node;
+		return find(parent,parent[node]);
+	}
+	
+	public void union(int parent[],int source,int destination){
+		int sourceSet = find(parent, source);
+		int destSet = find(parent,destination);
+		parent[sourceSet]=destSet;
+	}
+	
+	public int isCycle(UnionFindKruskals graph){
+		
+		int vertices = graph.V;
+		//make set with #of vertices and initialize with -1 as parent..-1 means itself
+		int parent[]=new int[vertices];
+		for(int i=0;i<vertices;i++)
+			parent[i]=-1;
+		
+		//pick each edge and check can edge make any cycle or not
+		int edges=graph.E;
+		for(int i=0;i<edges;i++){
+			System.out.println(graph.edge[i].src+" ->source,"+graph.edge[i].dest+"->dest");
+			int source=find(parent,graph.edge[i].src);
+			int dest=find(parent,graph.edge[i].dest);
+			System.out.println(source+" "+dest+" "+Arrays.toString(parent));
+			if(source==dest)
+				return 1;//cycle present
+			union(parent, source, dest);
+		}
+		return 0;
+	}
+}

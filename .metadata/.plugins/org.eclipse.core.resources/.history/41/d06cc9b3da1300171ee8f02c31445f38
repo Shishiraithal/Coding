@@ -1,0 +1,22 @@
+import java.util.LinkedList;
+
+
+//To find shortest path
+public class Graph_DijkstrasSP {
+	public static void main(String[] args) throws Exception {
+		
+	}
+}
+
+class Dijkstra{
+	LinkedList graph[];
+	Dijkstra(int n){
+		//n is number of nodes
+		graph=new LinkedList[n];
+	}
+	
+	public void addEdge(int node1,int node2,int weight){ 
+		//edge with weight
+		
+	}
+}

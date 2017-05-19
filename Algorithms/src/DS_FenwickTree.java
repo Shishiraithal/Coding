@@ -8,6 +8,11 @@ public class DS_FenwickTree {
 	
 	static int  BIT[];
 	public static void main(String[] args) throws Exception {
+		
+		for(int i=13;i>0;i-=i&-i){
+			System.out.println(i);
+		}
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
 
