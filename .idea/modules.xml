@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/APRIL17/APRIL17.iml" filepath="$PROJECT_DIR$/APRIL17/APRIL17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AlgoDs/AlgoDs.iml" filepath="$PROJECT_DIR$/AlgoDs/AlgoDs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Algorithms/Algorithms.iml" filepath="$PROJECT_DIR$/Algorithms/Algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CodeJam/CodeJam.iml" filepath="$PROJECT_DIR$/CodeJam/CodeJam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DynamicProgramming/DynamicProgramming.iml" filepath="$PROJECT_DIR$/DynamicProgramming/DynamicProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Geeks4GeeksPosts/Geeks4GeeksPosts.iml" filepath="$PROJECT_DIR$/Geeks4GeeksPosts/Geeks4GeeksPosts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiThreading/MultiThreading.iml" filepath="$PROJECT_DIR$/MultiThreading/MultiThreading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oops/Oops.iml" filepath="$PROJECT_DIR$/Oops/Oops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Practice.iml" filepath="$PROJECT_DIR$/Practice/Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SPOJ/SPOJ.iml" filepath="$PROJECT_DIR$/SPOJ/SPOJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SchoolGG/SchoolGG.iml" filepath="$PROJECT_DIR$/SchoolGG/SchoolGG.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sort/Sort.iml" filepath="$PROJECT_DIR$/Sort/Sort.iml" />
+    </modules>
+  </component>
+</project>

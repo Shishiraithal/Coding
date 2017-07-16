@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/HackerCup-FB/src/Y2011_Qualification/DoubleSquares.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Y2011_Qualification.DoubleSquares"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="HackerCup-FB"/>
+</launchConfiguration>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;SUMQ.java&apos; to &apos;DynamicProgramming/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;Geeks4GeeksPosts&apos;&#x0D;&#x0A;- Destination element: &apos;DynamicProgramming/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;p05_29_2017.SUMQ.java&apos;" description="Copy compilation unit" destination="=DynamicProgramming/src&lt;" element1="/src&lt;p05_29_2017{SUMQ.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1496771310925" units="1" version="1.0"/>
+</session>

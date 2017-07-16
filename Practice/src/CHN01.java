@@ -12,7 +12,7 @@ public class CHN01 {
 		while (t-- > 0) {
 			//String str = br.readLine().trim();
 			String str[]=br.readLine().trim().split(" ");
-			int val = Integer.parseInt(str[0].tri);
+			int val = Integer.parseInt(str[0].trim());
 			//code it
 
 			pw.println();

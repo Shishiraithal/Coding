@@ -43,3 +43,36 @@
 2017-05-10 21:19:38,966 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2017-05-11 12:27:20,811 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2017-05-17 14:19:34,604 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-05-22 16:19:09,028 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
+2017-05-22 16:19:12,619 [main] WARN  org.eclipse.jgit.util.FS_Win32 - Exception caught during execution of command '[bash, --login, -c, which git]' in 'C:\Users\injarapu', return code '1', error message 'which: no git in (/usr/local/bin:/usr/bin:/cygdrive/c/Program Files/Java/jre1.8.0_131/bin/server:/cygdrive/c/Program Files/Java/jre1.8.0_131/bin:/cygdrive/c/Program Files/Java/jre1.8.0_131/lib/amd64:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/ProgramData/Oracle/Java/javapath:/cygdrive/c/Windows/system32:/cygdrive/c/Windows:/cygdrive/c/Windows/System32/Wbem:/cygdrive/c/Windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files (x86)/Sennheiser/SoftphoneSDK:/usr/bin:/cygdrive/c/Bala/Softwares/eclipse)
+'
+2017-05-22 21:13:35,023 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-05-22 21:13:44,136 [Worker-0] WARN  org.eclipse.jgit.util.FS_Win32 - Exception caught during execution of command '[bash, --login, -c, which git]' in 'C:\Users\injarapu', return code '1', error message 'which: no git in (/usr/local/bin:/usr/bin:/cygdrive/c/Program Files/Java/jre1.8.0_131/bin/server:/cygdrive/c/Program Files/Java/jre1.8.0_131/bin:/cygdrive/c/Program Files/Java/jre1.8.0_131/lib/amd64:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/ProgramData/Oracle/Java/javapath:/cygdrive/c/Windows/system32:/cygdrive/c/Windows:/cygdrive/c/Windows/System32/Wbem:/cygdrive/c/Windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files (x86)/Sennheiser/SoftphoneSDK:/usr/bin:/cygdrive/c/Bala/Softwares/eclipse)
+'
+2017-05-23 16:17:55,498 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-05-23 16:17:58,984 [Worker-3] WARN  org.eclipse.jgit.util.FS_Win32 - Exception caught during execution of command '[bash, --login, -c, which git]' in 'C:\Users\injarapu', return code '1', error message 'which: no git in (/usr/local/bin:/usr/bin:/cygdrive/c/Program Files/Java/jre1.8.0_131/bin/server:/cygdrive/c/Program Files/Java/jre1.8.0_131/bin:/cygdrive/c/Program Files/Java/jre1.8.0_131/lib/amd64:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/ProgramData/Oracle/Java/javapath:/cygdrive/c/Windows/system32:/cygdrive/c/Windows:/cygdrive/c/Windows/System32/Wbem:/cygdrive/c/Windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files (x86)/Sennheiser/SoftphoneSDK:/usr/bin:/cygdrive/c/Program Files/nodejs:/cygdrive/c/Users/injarapu/AppData/Roaming/npm:/cygdrive/c/Bala/Softwares/eclipse)
+'
+2017-05-29 21:26:13,754 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-05-29 21:26:25,876 [Worker-2] WARN  org.eclipse.jgit.util.FS_Win32 - Exception caught during execution of command '[bash, --login, -c, which git]' in 'C:\Users\injarapu', return code '1', error message 'which: no git in (/usr/local/bin:/usr/bin:/cygdrive/c/Program Files/Java/jre1.8.0_131/bin/server:/cygdrive/c/Program Files/Java/jre1.8.0_131/bin:/cygdrive/c/Program Files/Java/jre1.8.0_131/lib/amd64:/cygdrive/c/Program Files/Docker/Docker/Resources/bin:/cygdrive/c/ProgramData/Oracle/Java/javapath:/cygdrive/c/Windows/system32:/cygdrive/c/Windows:/cygdrive/c/Windows/System32/Wbem:/cygdrive/c/Windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files (x86)/Sennheiser/SoftphoneSDK:/usr/bin:/cygdrive/c/Program Files/nodejs:/cygdrive/c/Program Files/PostgreSQL/9.6/bin:/cygdrive/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit:/cygdrive/c/Users/injarapu/AppData/Roaming/npm:/cygdrive/c/Bala/Softwares/eclipse)
+'
+2017-06-02 22:19:55,331 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-03 08:08:06,526 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-05 23:14:17,569 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-06 07:06:05,618 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-06 21:43:03,990 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-07 21:35:49,403 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-13 21:42:37,781 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-14 21:08:35,749 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-15 21:29:41,619 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-16 21:03:55,378 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-17 22:47:55,399 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-19 14:36:33,867 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-20 08:10:31,275 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-21 20:13:07,070 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-07-01 08:59:36,675 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-07-04 21:15:53,233 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-07-06 05:23:19,372 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-07-07 14:27:28,199 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-07-10 19:09:10,040 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-07-11 20:33:17,820 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-07-16 23:03:00,532 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
