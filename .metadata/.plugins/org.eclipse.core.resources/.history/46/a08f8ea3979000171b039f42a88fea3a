@@ -1,0 +1,10 @@
+package creational.prototype;
+
+public class MainClient {
+	public static void main(String[] args) throws Exception {
+
+		BookShop shop=new BookShop();
+		System.out.println(String);
+		
+	}
+}

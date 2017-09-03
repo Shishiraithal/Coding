@@ -1,0 +1,10 @@
+package strctural.composite;
+
+public class MainClient {
+	public static void main(String[] args) throws Exception {
+		
+		Component mouse=new Leaf(500,"Mouse");
+		
+		
+	}
+}

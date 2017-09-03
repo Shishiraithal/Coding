@@ -1,0 +1,10 @@
+package strctural.adapter;
+
+public class MainClient {
+	public static void main(String[] args) throws Exception {
+		
+		PaymentAdapter paymentAdapter = new PaymentAdapter();
+		
+		
+	}
+}

@@ -1,0 +1,14 @@
+package strctural.composite;
+
+public class MainClient {
+	public static void main(String[] args) throws Exception {
+		
+		Component mouse=new Leaf(500,"Mouse");
+		Component keyboard=new Leaf(1000,"KeyBoard");
+		
+		Component ssd=new Leaf(5000,"SSD");
+		Component keyboard=new Leaf(1000,"KeyBoard");
+		
+		
+	}
+}

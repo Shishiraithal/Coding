@@ -1,0 +1,82 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Queue;
+
+public class PackageProblem {
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
+
+		while (true) {
+			String inp[] = br.readLine().trim().split(":");
+			// package max wight
+			int packageWeight = Integer.parseInt(inp[0].trim());
+			inp = inp[1].trim().split(" ");
+			System.out.println(Arrays.toString(inp));
+			ArrayList<Package> packages = new ArrayList<>();
+
+			// Parse input and store each package in packages List
+			for (String str : inp) {
+				String pkgParser[] = str.trim().substring(1, str.length() - 1).split(",");
+				Package pkg = new Package(Integer.parseInt(pkgParser[0].trim()), Float.parseFloat(pkgParser[1].trim()),
+						Integer.parseInt(pkgParser[2].trim().substring(1)));
+				packages.add(pkg);
+			}
+			maxPackageCount=0;
+			selectedPackages="";
+			findPackages(packages, 0, packageWeight, 0, 0, "");
+			System.out.println(selectedPackages);
+			
+			break;
+		}
+	}
+
+	//global variables
+	public static int maxPackageCount=0;
+	public static String selectedPackages="";
+	
+	//recursive function
+	public static void findPackages(ArrayList<Package> packages, int currentIndex, float packageMaxWeight,
+			float selectedPackageWeight, int selectedPackageCost, String selectedPackageIndexs) {
+		if (selectedPackageWeight > packageMaxWeight) {
+			return;
+		}
+		if (currentIndex == packages.size()) {
+			if(maxPackageCount<selectedPackageCost){
+				maxPackageCount=selectedPackageCost;
+				selectedPackages=selectedPackageIndexs;
+			}
+			return;
+		}
+		Package currentPackage = packages.get(currentIndex);
+		findPackages(packages, currentIndex + 1, packageMaxWeight, selectedPackageWeight, selectedPackageCost,
+				selectedPackageIndexs);
+		
+		findPackages(packages, currentIndex + 1, packageMaxWeight, selectedPackageWeight + currentPackage.weight,
+				selectedPackageCost + currentPackage.cost, selectedPackageIndexs + " " + currentPackage.index);
+	}
+}
+
+class Package {
+	int index;
+	float weight;
+	int cost;
+
+	public Package(int index, float weight, int cost) {
+		this.index = index;
+		this.weight = weight;
+		this.cost = cost;
+	}
+
+	@Override
+	public String toString() {
+		System.out.println(this.index + " " + this.weight + " " + this.cost);
+		return super.toString();
+	}
+}

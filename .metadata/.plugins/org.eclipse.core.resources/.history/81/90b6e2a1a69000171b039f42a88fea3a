@@ -1,0 +1,6 @@
+package strctural.adapter;
+
+interface HREmployees {
+	//id name designation
+	doPayment(String[][] employees);
+}

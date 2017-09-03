@@ -1,0 +1,8 @@
+package creational.prototype;
+
+public class BookShop {
+	private String shopName;
+	private List<Book> listOfBooks;
+	
+
+}

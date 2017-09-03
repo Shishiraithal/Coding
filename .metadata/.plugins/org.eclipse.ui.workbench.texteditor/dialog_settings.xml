@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="575" key="DIALOG_X_ORIGIN"/>
+		<item value="325" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Syst" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="a=a+"/>
+			<item value="Singleton"/>
+			<item value=" MT"/>
+			<item value="&#x09;&#x09;&#x09;&#x09;&#x09;System.out.println"/>
 			<item value="syst"/>
 			<item value="1000000007"/>
 			<item value="1000000007 "/>
 			<item value="child"/>
-			<item value="BigInteger "/>
-			<item value="System.out.println"/>
-			<item value="public "/>
-			<item value="private"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="Singleton4"/>
+			<item value="Singleton2"/>
+			<item value="&#x09;&#x09;&#x09;&#x09;&#x09;//System.out.println"/>
 			<item value="long "/>
 			<item value="private "/>
 			<item value="private"/>
 			<item value="public static "/>
-			<item value="public static"/>
-			<item value="static"/>
-			<item value="CLIQUED1"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="385" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="523" key="DIALOG_HEIGHT"/>
-		<item value="1006" key="DIALOG_X_ORIGIN"/>
-		<item value="196" key="DIALOG_Y_ORIGIN"/>
+		<item value="1284" key="DIALOG_X_ORIGIN"/>
+		<item value="171" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

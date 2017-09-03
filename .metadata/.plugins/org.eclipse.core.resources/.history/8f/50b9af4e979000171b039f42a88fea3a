@@ -1,0 +1,11 @@
+package creational.prototype;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BookShop {
+	private String shopName;
+	private List<Book> listOfBooks = new ArrayList<Book>();
+	
+
+}

@@ -1,0 +1,12 @@
+package strctural.composite;
+
+public class Leaf implements Component{
+	
+	int price;
+	String name;
+	
+	@Override
+	public void showPrice() {
+		System.out.println(this.name+" : "+this.price);
+	}
+}

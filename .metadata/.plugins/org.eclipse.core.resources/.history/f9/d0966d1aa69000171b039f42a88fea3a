@@ -1,0 +1,6 @@
+package strctural.adapter;
+
+interface ThirdPartyPayment {
+	//id name designation
+	String[] listOfEmployees();
+}

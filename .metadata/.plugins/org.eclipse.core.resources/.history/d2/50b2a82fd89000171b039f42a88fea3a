@@ -1,0 +1,5 @@
+package strctural.composite;
+
+public class Composite implements Component{
+
+}

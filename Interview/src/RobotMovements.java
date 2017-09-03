@@ -1,0 +1,53 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.util.Arrays;
+
+public class RobotMovements {
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int n=4;//default value
+		
+		//uncomment below line to take input from console.
+		//n = Integer.parseInt(br.readLine().trim());
+		
+		boolean isVisited[][] = new boolean[n][n];
+		count=0;
+		findPossiblePathsCount(n, 0, 0, isVisited);
+		System.out.println(count);
+
+	}
+
+	static int count = 0;
+
+	private static void findPossiblePathsCount(int n, int i, int j, boolean[][] isVisited) {
+		//System.out.println(count + " (" + i + " " + j + ")" + Arrays.deepToString(isVisited));
+		if (n == 0)
+			return;
+		if (i >= n || j >= n || i < 0 || j < 0)
+			return;
+		if (i == n - 1 && j == n - 1) {
+			count++;
+			return;
+		}
+		
+		boolean isVisitedClone[][] = new boolean[4][4];
+		//cloning array
+		for (int i1 = 0; i1 < n; i1++) {
+			for (int j2 = 0; j2 < n; j2++) {
+				isVisitedClone[i1][j2] = isVisited[i1][j2];
+			}
+		}
+		isVisitedClone[i][j] = true;
+		if (i - 1 >= 0 && !isVisitedClone[i - 1][j])
+			findPossiblePathsCount(n, i - 1, j, isVisitedClone);
+		if (i + 1 < n && !isVisitedClone[i + 1][j])
+			findPossiblePathsCount(n, i + 1, j, isVisitedClone);
+		if (j - 1 >= 0 && !isVisitedClone[i][j - 1])
+			findPossiblePathsCount(n, i, j - 1, isVisitedClone);
+		if (j + 1 < n && !isVisitedClone[i][j + 1])
+			findPossiblePathsCount(n, i, j + 1, isVisitedClone);
+	}
+}

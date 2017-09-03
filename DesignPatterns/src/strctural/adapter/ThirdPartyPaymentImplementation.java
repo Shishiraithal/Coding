@@ -1,0 +1,15 @@
+package strctural.adapter;
+
+import java.util.ArrayList;
+
+public class ThirdPartyPaymentImplementation implements ThirdPartyPayment{
+
+	@Override
+	public void processPayment(ArrayList<Employee> employees) {
+
+		for(Employee employee:employees){
+			System.out.println(employee.getName()+" payment done!!");
+		}
+	}
+
+}

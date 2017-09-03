@@ -1,0 +1,14 @@
+package strctural.adapter;
+
+public class MainClient implements HREmployees{
+	public static void main(String[] args) throws Exception {
+		
+	}
+
+	@Override
+	public void doPayment(String[][] employees) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

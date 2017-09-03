@@ -1,0 +1,27 @@
+package creational.prototype;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BookShop {
+	private String shopName;
+	private List<Book> listOfBooks = new ArrayList<Book>();
+	
+	public String getShopName() {
+		return shopName;
+	}
+	public List<Book> getListOfBooks() {
+		return listOfBooks;
+	}
+	public void setShopName(String shopName) {
+		this.shopName = shopName;
+	}
+	public void setListOfBooks(List<Book> listOfBooks) {
+		this.listOfBooks = listOfBooks;
+	}
+	
+	public void loadData(){
+		//assume db connection
+	}	
+
+}

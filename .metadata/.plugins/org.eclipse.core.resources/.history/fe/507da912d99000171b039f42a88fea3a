@@ -1,0 +1,21 @@
+package strctural.composite;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Composite implements Component{
+
+	List<Component> components = new ArrayList<>();
+	
+	addComponet(Component component){
+		this.components.add(component);
+	}
+	
+	@Override
+	public void showPrice() {
+		for(Component component: components){
+			component.showPrice();
+		}
+	}
+
+}

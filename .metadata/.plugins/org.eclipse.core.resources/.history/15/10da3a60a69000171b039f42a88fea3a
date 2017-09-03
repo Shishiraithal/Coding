@@ -1,0 +1,11 @@
+package strctural.adapter;
+
+public class PaymentAdapter implements HREmployees {
+
+	@Override
+	public String[] listOfEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

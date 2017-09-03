@@ -1,0 +1,19 @@
+package strctural.adapter;
+
+import java.util.ArrayList;
+
+public class PaymentAdapter implements HREmployees {
+	
+	ArrayList<Employee> employees;
+
+	@Override
+	public void doPayment(String[][] employees) {
+
+		employees=new ArrayList<>();
+		
+		
+	}
+
+	
+	
+}

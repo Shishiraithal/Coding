@@ -1,0 +1,13 @@
+package strctural.adapter;
+
+import java.util.ArrayList;
+
+public class ThirdPartyPaymentImplementation implements ThirdPartyPayment{
+
+	@Override
+	public void processPayment(ArrayList<Employee> employees) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

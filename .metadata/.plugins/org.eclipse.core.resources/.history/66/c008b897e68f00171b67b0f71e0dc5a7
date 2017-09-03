@@ -1,0 +1,92 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.util.Arrays;
+
+public class RobotMovements {
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
+
+		int grid[][] = new int[4][4];
+		//System.out.println(countPaths(grid, 0, 0));
+
+		int n = Integer.parseInt(br.readLine().trim());
+
+		boolean isVisited[][] = new boolean[n][n];
+		count=0;
+		findPaths(n, 0, 0, isVisited);
+		System.out.println(count);
+
+	}
+
+	static int count = 0;
+
+	private static void findPaths(int n, int i, int j, boolean[][] isVisited) {
+		System.out.println(count + " (" + i + " " + j + ")" + Arrays.deepToString(isVisited));
+		if (n == 0)
+			return;
+		if (i >= n || j >= n || i < 0 || j < 0)
+			return;
+		if (isVisited[i][j])
+			return;
+		if (i == n - 1 && j == n - 1) {
+			count++;
+			return;
+		}
+		//boolean[][] isVisitedClone=isVisited.clone();
+		//isVisitedClone[i][j] = true;
+		boolean isVisitedClone[][] = new int[4][4];
+		for (int m = 0; m < 4; m++) {
+			for (int n = 0; n < 4; n++) {
+				arr[m][n] = grid[m][n];
+			}
+		}
+
+		arr[i][j] = 1;
+		
+		findPaths(n, i - 1, j, isVisitedClone);
+		findPaths(n, i + 1, j, isVisitedClone);
+		findPaths(n, i, j - 1, isVisitedClone);
+		findPaths(n, i, j + 1, isVisitedClone);
+		/*if (i - 1 >= 0 && !isVisitedClone[i - 1][j])
+			findPaths(n, i - 1, j, isVisitedClone);
+		if (i + 1 < n && !isVisitedClone[i + 1][j])
+			findPaths(n, i + 1, j, isVisitedClone);
+		if (j - 1 >= 0 && !isVisitedClone[i][j - 1])
+			findPaths(n, i, j - 1, isVisitedClone);
+		if (j + 1 < n && !isVisitedClone[i][j + 1])
+			findPaths(n, i, j + 1, isVisitedClone);*/
+		/*
+		if (i - 1 >= 0 && !isVisited[i - 1][j])
+			findPaths(n, i - 1, j, isVisited);
+		if (i + 1 < n && !isVisited[i + 1][j])
+			findPaths(n, i + 1, j, isVisited);
+		if (j - 1 >= 0 && !isVisited[i][j - 1])
+			findPaths(n, i, j - 1, isVisited);
+		if (j + 1 < n && !isVisited[i][j + 1])
+			findPaths(n, i, j + 1, isVisited);*/
+	}
+
+	static int countPaths(int grid[][], int i, int j) {
+
+		if (i < 0 || j < 0 || i >= 4 || j >= 4)
+			return 0;
+		if (grid[i][j] == 1)
+			return 0;
+		if (i == 3 && j == 3)
+			return 1;
+		int arr[][] = new int[4][4];
+		for (int m = 0; m < 4; m++) {
+			for (int n = 0; n < 4; n++) {
+				arr[m][n] = grid[m][n];
+			}
+		}
+
+		arr[i][j] = 1;
+		return countPaths(arr, i, j + 1) + countPaths(arr, i, j - 1) + countPaths(arr, i + 1, j)
+				+ countPaths(arr, i - 1, j);
+	}
+
+}
