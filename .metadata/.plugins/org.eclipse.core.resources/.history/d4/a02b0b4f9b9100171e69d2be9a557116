@@ -1,0 +1,16 @@
+package strctural.proxy;
+
+import java.util.ArrayList;
+
+public class Proxy implements Internet{
+
+	static ArrayList<String> blockedUrls=new ArrayList<>();
+	static{
+		blockedUrls.add("pornhub.com")
+	}
+
+	@Override
+	public void connectTo(String url) {
+		
+	}
+}

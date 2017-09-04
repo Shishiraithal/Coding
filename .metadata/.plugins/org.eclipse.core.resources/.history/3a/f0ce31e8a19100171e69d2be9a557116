@@ -1,0 +1,14 @@
+package structural.flyweight;
+
+public class MainClient {
+	public static void main(String[] args) throws Exception {
+
+		FlyweightPattern pattern=new FlyweightPattern();
+		
+		Player terrorist=pattern.getPlayer("terrorist");
+		
+		terrorist.assignWeapon("Gun");
+		terrorist.mission();
+		
+	}
+}

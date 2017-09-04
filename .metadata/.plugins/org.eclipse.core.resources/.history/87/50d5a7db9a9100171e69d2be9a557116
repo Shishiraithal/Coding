@@ -1,0 +1,6 @@
+package strctural.proxy;
+
+public interface Internet {
+	
+
+}

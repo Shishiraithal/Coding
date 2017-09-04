@@ -1,0 +1,5 @@
+package strctural.proxy;
+
+public class RealInternet implements Internet{
+	
+}

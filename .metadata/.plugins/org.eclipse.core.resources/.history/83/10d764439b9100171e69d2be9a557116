@@ -1,0 +1,16 @@
+package strctural.proxy;
+
+import java.util.ArrayList;
+
+public class Proxy implements Internet{
+
+	ArrayList<String> blockedUrls=new ArrayList<>();
+	static{
+		
+	}
+
+	@Override
+	public void connectTo(String url) {
+		
+	}
+}

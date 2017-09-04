@@ -1,0 +1,27 @@
+package structural.flyweight;
+
+import java.util.HashMap;
+
+public class FlyweightPattern {
+	private static HashMap<String, Player> cache = new HashMap<String, Player>();
+
+	public static Player getPlayer(String type) {
+		Player p = null;
+		
+		switch (type) {
+		case "terrorist":
+			if(cache.containsKey("terrorist"))
+				p=cache.get("terrorist");
+				
+			break;
+		case "counterterrorist":
+			
+			break;
+		default:
+			break;
+		}
+		
+		return p;
+	}
+
+}

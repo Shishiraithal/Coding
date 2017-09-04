@@ -1,0 +1,31 @@
+package structural.flyweight;
+
+public class MainClient {
+	public static void main(String[] args) throws Exception {
+
+		//Note: Probelm here is if you update any object,it'll effect others to because of copy reference
+		
+		FlyweightPattern pattern = new FlyweightPattern();
+
+		Player terrorist = pattern.getPlayer("terrorist");
+
+		terrorist.assignWeapon("Gun");
+		terrorist.mission();
+
+		Player terrorist2 = pattern.getPlayer("terrorist");
+
+		terrorist.assignWeapon("Gun2");
+		terrorist.mission();
+		
+		Player terrorist = pattern.getPlayer("terrorist");
+
+		terrorist.assignWeapon("Gun");
+		terrorist.mission();
+
+		Player terrorist2 = pattern.getPlayer("terrorist");
+
+		terrorist.assignWeapon("Gun2");
+		terrorist.mission();
+
+	}
+}

@@ -1,0 +1,20 @@
+package structural.flyweight;
+
+public class Terrorist implements Player{
+
+	private String weapon
+	
+	@Override
+	public void assignWeapon(String weapon) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mission() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

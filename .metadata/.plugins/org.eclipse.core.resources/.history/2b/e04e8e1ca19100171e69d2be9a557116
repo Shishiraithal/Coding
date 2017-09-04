@@ -1,0 +1,6 @@
+package structural.flyweight;
+
+public class FlyweightPattern {
+	private static HashMap <String, Player> hm =
+            new HashMap<String, Player>();
+}

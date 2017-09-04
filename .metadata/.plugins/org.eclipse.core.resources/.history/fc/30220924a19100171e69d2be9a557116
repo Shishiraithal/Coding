@@ -1,0 +1,7 @@
+package structural.flyweight;
+
+import java.util.HashMap;
+
+public class FlyweightPattern {
+	private static HashMap<String, Player> cache = new HashMap<String, Player>();
+}

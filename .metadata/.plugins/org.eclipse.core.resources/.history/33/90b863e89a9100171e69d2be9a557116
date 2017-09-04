@@ -1,0 +1,5 @@
+package strctural.proxy;
+
+public interface Internet {
+	connectTo()
+}

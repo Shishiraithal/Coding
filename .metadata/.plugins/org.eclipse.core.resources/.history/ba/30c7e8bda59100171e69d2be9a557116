@@ -1,0 +1,8 @@
+package strucutral.facade;
+
+public class HotelKeeper {
+	public void getVeg(){
+		Hotel veg=new VegRestaurent();
+		
+	}
+}

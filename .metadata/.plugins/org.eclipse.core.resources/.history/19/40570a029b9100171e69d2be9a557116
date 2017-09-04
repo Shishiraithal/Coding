@@ -1,0 +1,11 @@
+package strctural.proxy;
+
+public class RealInternet implements Internet{
+
+	@Override
+	public void connectTo() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

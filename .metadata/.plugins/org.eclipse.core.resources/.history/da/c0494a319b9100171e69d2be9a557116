@@ -1,0 +1,11 @@
+package strctural.proxy;
+
+public class Proxy implements Internet{
+
+	@Override
+	public void connectTo(String url) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

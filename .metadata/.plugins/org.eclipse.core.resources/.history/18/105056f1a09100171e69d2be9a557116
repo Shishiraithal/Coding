@@ -1,0 +1,16 @@
+package structural.flyweight;
+
+public class CounterTerrorist implements Player{
+
+	@Override
+	public void assignWeapon(String weapon) {
+		
+	}
+
+	@Override
+	public void mission() {
+		
+	}
+	
+
+}
